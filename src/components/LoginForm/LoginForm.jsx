@@ -66,7 +66,7 @@ function LoginForm() {
                   <button className="cta"><Link  to="/">Home</Link></button>
                   </p> */}
                   
-    <h4>Welcome Back to Helping every Pal get ready for a new home.</h4> 
+    <h4>Welcome to Fetch!</h4> 
     
   </div>
 
