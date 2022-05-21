@@ -106,15 +106,6 @@ function LoginForm() {
     </form>
     </div>
 
-    <footer className="footerbottom">
-            <div><Link to="/"><img className="footer-logo" src={Palslogo}/></Link></div>
-            
-
-        </footer>
-
-        <footer className="footerbottom">
-            <p className="footer-item"> © 2022 All Pets</p>
-        </footer>
     </div>
     
     );
