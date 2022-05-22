@@ -1,55 +1,39 @@
-nav {
-    background-color: #6339ff;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-rows: 1;
-    grid-template-columns: 10% 40% 30% 20%;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font: var(--font-secondary);
+    font-weight: var(--bold);
+    font-size: 14px;
+    background-color: var(--color-primary);
+    padding: 10px;
 }
 
-.logoDiv {
-    grid-column: 1 / span 1;
-    justify-self: center;
-}
-
-.logo {
-    max-width: 80px;
-}
-
-ul {
-    display:flex;
-}
 
 .firstList {
-    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .secondList {
-    grid-column: 4 / span 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-li {
-    list-style: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    position: relative;
-    cursor: pointer;
-    padding-right: 2em;
-    padding-left: 2em;
-} 
 
 a {
     text-decoration: none;
     background-image: linear-gradient(
       to right,
-      #b5ec85,
-      #b5ec85 50%,
-      white 50%
+      var(--color-secondary),
+      var(--color-secondary) 50%,
+      var(--color-background-light) 50%
     );
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
-    padding: 5px 0;
+    padding: 0px 5px 0px 5px;
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -58,7 +42,7 @@ a {
   
   a:before{
     content: '';
-    background: #b5ec85;
+    background: var(--color-secondary);
     display: block;
     position: absolute;
     bottom: -3px;
