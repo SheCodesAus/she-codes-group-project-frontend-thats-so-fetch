@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&family=Jaldi:wght@700&family=Poppins:wght@300&display=swap');
+
+
+
+.aboutus {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jaldi', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    
+  
+}
+
+.flex-parent {
+    display: flex;
+  
+  }
+  
+  .jc-center {
+    justify-content: center;
+   
+    
+  }
+  
+  button.home-button-right {
+    margin-right: 20px;
+    background-color:#6339ff;
+    color: #6339ff;
+    margin-block-start: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width:200px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jaldi', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  button.home-button-left {
+    margin-right: 20px;
+    background-color: #6339ff;
+    color: #6339ff;
+    margin-block-start: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width:200px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jaldi', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+
+
+h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jaldi', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color:#000000;
+    font-size: 48px;
+    
+}
+
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Jaldi', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color:#000000;
+    font-size: 36px;
+}
+
+
+
+
+
+
+
+
+
+
