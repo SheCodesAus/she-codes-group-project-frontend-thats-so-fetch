@@ -86,6 +86,7 @@ function LoginForm() {
           onChange={handleChange}
         />
       </div>
+    
 
       <div className="form-item">
         <label htmlFor="password">Password:</label>
@@ -100,8 +101,9 @@ function LoginForm() {
       <div className="form-item">
       <div className="vertical-center">
       <button type="submit" onClick={handleSubmit}>
-        Login
+        LOGIN
       </button>
+    
       </div>
       </div>
 
