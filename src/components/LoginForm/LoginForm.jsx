@@ -56,16 +56,29 @@ function LoginForm() {
 
   return (
 
+    <div>
+  <div id="welcome-text">    
+      
+  <div className="hero-image">
+  <div className="hero-text">
+    <h1>fetch</h1>
+                  {/* <p>
+                  <button className="cta"><Link  to="/">Home</Link></button>
+                  </p> */}
+                  
+    <h2></h2> 
+    
+  </div>
 
   
-
+  </div>
+  </div>
+    
+ 
     <div className="form">
-    <form className="login-form"> 
+    <form className="login-form">
     <div className="form-item">
-    <h1>Get Started</h1>
-    <h2>Welcome to Fetch!</h2> 
         <label htmlFor="username">Username:</label>
-
         <input className="form"
           type="text"
           id="username"
@@ -79,13 +92,13 @@ function LoginForm() {
         <input
           type="password"
           id="password"
-          placeholder="Password"
+          placeholder="Enter Password"
           onChange={handleChange}
         />
       </div>
 
       <div className="form-item">
-        <div className="vertical-center">
+      <div className="vertical-center">
       <button type="submit" onClick={handleSubmit}>
         Login
       </button>
@@ -95,6 +108,8 @@ function LoginForm() {
     </form>
     </div>
 
+    </div>
+    
     
     );
 }

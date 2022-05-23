@@ -15,10 +15,12 @@ h2 {
 
 
 form {
-    background-color: #b5ec85;
+    background-color: #ffff;
     margin: 50px auto;
     width: 50%;
     text-align: center;
+    border-style: solid;
+    border-color: grey;
   }
 
 
@@ -28,7 +30,7 @@ form {
     width: 59%;
     text-align: left;
     padding:5px;
-    border-radius:15px;
+    
   }
   
 
@@ -45,7 +47,7 @@ form {
   user name and password font */
   .form-item label {
     font-size: 17px;
-    color: #6339ff;
+    color: #303030;
     padding: 5px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 1px;
@@ -55,9 +57,9 @@ form {
   .form-item input,
   .form-item textarea {
     flex-basis: 50%;
-    border-radius:15px;
+
     text-align: left;
-    box-shadow: 5px 10px #9277f8;
+
     
     
   }
@@ -73,16 +75,16 @@ form {
   .form-item input,
   .form-item textarea,
   .form-item button {
-    border-radius:15px;
     border: 2px solid #fff9f2;
     padding: 5px;
     font-size: 15px;
-    background-color: #6339ff;
+    background-color: #ffff;
+    text-align: left;
   }
   
   .form-item input,
   .form-item textarea {
-    color: #b5ec85;
+    color: #6339ff;
   }
   
   .form-item button {
@@ -100,12 +102,14 @@ form {
   
   .form-item button {
     width: 100px;
-    color: #b5ec85;
-    box-shadow: 5px 10px #9277f8;
+    color: #ffff;
+    background-color: #6339ff;
+    text-align: center;
+    
   }
 
   .vertical-center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: right;
   }
