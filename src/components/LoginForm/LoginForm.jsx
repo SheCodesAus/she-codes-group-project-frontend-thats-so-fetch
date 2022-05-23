@@ -65,6 +65,7 @@ function LoginForm() {
     <h1>Get Started</h1>
     <h2>Welcome to Fetch!</h2> 
         <label htmlFor="username">Username:</label>
+
         <input className="form"
           type="text"
           id="username"

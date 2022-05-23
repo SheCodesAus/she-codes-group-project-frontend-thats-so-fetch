@@ -12,13 +12,17 @@ h2 {
 }
 
 /* whole box */
+
+
 form {
     background-color: #b5ec85;
     margin: 50px auto;
     width: 50%;
     text-align: center;
   }
-  
+
+
+
   .login-form {
     margin: 50px auto;
     width: 59%;
@@ -29,13 +33,13 @@ form {
   
 
   .form-item {
-    
     display: flex;
     justify-content: left;
     align-items: left;
     text-align: left;
     flex-direction: column;
     padding: 5px;
+    
   }
 /*   
   user name and password font */
@@ -51,9 +55,10 @@ form {
   .form-item input,
   .form-item textarea {
     flex-basis: 50%;
-    background-color:#6339ff;
     border-radius:15px;
     text-align: left;
+    box-shadow: 5px 10px #9277f8;
+    
     
   }
   
@@ -61,6 +66,7 @@ form {
   .form-item input:hover,
   .form-item textarea:hover {
     border: 2px solid #fff9f2;
+    
   }
   
   /* login text box */
@@ -68,11 +74,10 @@ form {
   .form-item textarea,
   .form-item button {
     border-radius:15px;
-    border: 2px solid #6339ff;
+    border: 2px solid #fff9f2;
     padding: 5px;
     font-size: 15px;
     background-color: #6339ff;
-    
   }
   
   .form-item input,
@@ -88,7 +93,7 @@ form {
   }
   
   .form-item button:hover {
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #fff9f2;
     background-color:#b5ec85;
     color:#6339ff;
   }
@@ -96,6 +101,7 @@ form {
   .form-item button {
     width: 100px;
     color: #b5ec85;
+    box-shadow: 5px 10px #9277f8;
   }
 
   .vertical-center {
