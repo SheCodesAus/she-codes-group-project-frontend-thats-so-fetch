@@ -16,6 +16,11 @@ import NewsPage from "./pages/NewsPage";
 import ProfilePage from "./pages/ProfilePage";
 import AboutPage from "./pages/AboutPage";
 
+import ArticlesPage from "./pages/ArticlesPage";
+import ArticlesFormPage from "./pages/ArticlesFormPage";
+import EditArticlesPage from "./pages/EditArticlesPage";
+
+
 function App() {
   return (
     <Router>
@@ -29,6 +34,10 @@ function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/articles/create" element={<ArticlesFormPage />} />
+          <Route path="/articles/:id" element={<ArticlesPage />} />
+          <Route path="/comment/:id" element={<CommentPage />} />
+          <Route path="/articles/:id/edit" element={<EditArticlesPage/>} />
         </Routes>
       </div>
     </Router>
