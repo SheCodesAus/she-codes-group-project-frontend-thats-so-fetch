@@ -1,6 +1,6 @@
 body {
   background-color: var(--current-background);
-  /* color: var(--font-color); */
+  color: var(--current-foreground);
   margin: 0px;
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
