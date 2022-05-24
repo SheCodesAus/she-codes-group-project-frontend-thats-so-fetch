@@ -20,6 +20,8 @@ function Navbar() {
             <nav className="secondList">
                 <Link to="/profile:id">Profile</Link>
                 <Link to="/login">Login</Link>
+                <Link to="/register/">Register </Link>
+
             </nav>
         </section>
     )
