@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 
 // Styles
-
+import '../../pages/forms.css';
 
 import { Link } from "react-router-dom";
 
@@ -61,12 +61,12 @@ function LoginForm() {
       
   <div className="hero-image">
   <div className="hero-text">
-    <h1>Log In</h1>
+    <h1>fetch</h1>
                   {/* <p>
                   <button className="cta"><Link  to="/">Home</Link></button>
                   </p> */}
                   
-    <h4>Welcome to Fetch!</h4> 
+    <h2></h2> 
     
   </div>
 
@@ -86,27 +86,32 @@ function LoginForm() {
           onChange={handleChange}
         />
       </div>
+    
 
       <div className="form-item">
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
-          placeholder="Password"
+          placeholder="Enter Password"
           onChange={handleChange}
         />
       </div>
 
       <div className="form-item">
+      <div className="vertical-center">
       <button type="submit" onClick={handleSubmit}>
-        Login
+        LOGIN
       </button>
+    
+      </div>
       </div>
 
     </form>
     </div>
 
     </div>
+    
     
     );
 }
