@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
+  /* Dark theme */
+  --dark-background: #303030;
+  --dark-foreground: #fff9f2;
+  /* Light theme */
+  --light-background: #fff9f2;
+  --light-foreground: #303030;
+  /* Default */
+  --current-background: var(--light-background);
+  --current-foreground: var(--light-foreground);
+  
   --font-primary: 'Archivo', sans-serif;
   --font-secondary: 'Noticia Text', serif;
   --regular: 400;
@@ -9,7 +19,11 @@
   --color-primary: #6339ff;
   --color-secondary: #b5ec85;
   --color-tertiary: #9277f8;
-  --color-background-light: #fff9f2;
-  --color-background-dark: #303030;
+}
 
+@media (prefers-color-scheme: dark){
+  :root {
+    --current-background: var(--dark-background);
+    --current-foreground: var(--dark-foreground);
+  }
 }
