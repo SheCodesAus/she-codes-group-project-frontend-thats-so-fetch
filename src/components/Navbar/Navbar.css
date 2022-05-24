@@ -24,6 +24,7 @@
 
 a {
     text-decoration: none;
+    background-color: var(--light-background);
     background-image: linear-gradient(
       to right,
       var(--color-secondary),
