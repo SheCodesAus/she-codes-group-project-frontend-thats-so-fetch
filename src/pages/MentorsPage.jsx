@@ -22,14 +22,15 @@ function MentorsPage() {
     // MAY NEED TO ALTER THIS.. AS I DON'T BELIEVE WE HAVE AN ENDPOINT LIKE THIS.. LOOK INTO THIS FURTHER
     // I'm thinking that we will need to either create a table of "mentors" with ForgeinKey orrr filter all the users to only show the "mentors"
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}mentors`)
+        fetch(`${process.env.REACT_APP_API_URL}user`)
             .then((results) => {
                 return results.json();
             })
             .then((data) => {
-                setMentorData(data);
+                console.log(data)
+                setMentorList(data);
             });
-    }, [id]);
+    }, []);
 
 
     return (
@@ -39,6 +40,7 @@ function MentorsPage() {
 
             <div id="mentor-list">
                 {mentorList.map((mentorData) => {
+                    console.log(mentorData);
                     return (
                         <MentorCard
                             key={`mentor-${mentorData.id}`}

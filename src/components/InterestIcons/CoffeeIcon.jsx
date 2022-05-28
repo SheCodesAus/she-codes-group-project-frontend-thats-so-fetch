@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { GiCoffeeCup } from 'react-icons/gi';
 
-// Styles
-import "./InterestIcons.css"
+// // Styles
+// import "./InterestIcons.css"
 
-function CoffeeIcon() {
-    return <GiCoffeeCup className="icon" />
-}
+// // WILL NEED TO TEST THIS ONCE THE API IS WORKING
+// function CoffeeIcon(mentorData) {
 
-export default CoffeeIcon
+//     // State
+//     const [status, setStatus] = useState("icon")
+
+//     // Handle Change
+//     function handleStatusChange() {
+//         setStatus("active");
+//     };
+
+//     // Action
+//     useEffect(() => {
+//         if mentorData.coffee === true ? handleStatusChange() : null
+//     });
+
+
+//     return <GiCoffeeCup className={status} />
+// }
+
+// export default CoffeeIcon
