@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 // Styles
 import './App.css';
@@ -26,13 +27,15 @@ function App() {
         <Routes>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register/" element={<RegisterPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/mentors" element={<MentorsPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
+      </div>
+      <div>
+        <Footer />
       </div>
     </Router>
   );
