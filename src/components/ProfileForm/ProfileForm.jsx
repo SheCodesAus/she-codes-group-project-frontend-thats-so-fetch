@@ -39,7 +39,7 @@ function ProfileForm(profileData) {
         try {
             const response = await fetch(`${process.env.RE_APP_API_URL}user/`,
                 {
-                method: "post",
+                method: "put",
                 headers: {
                 "Content-Type": "application/json",
                 Authorization: `Token ${token}`
