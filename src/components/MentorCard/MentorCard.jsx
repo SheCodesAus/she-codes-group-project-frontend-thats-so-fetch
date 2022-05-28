@@ -1,31 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // Styles
 import "./MentorCard.css"
 
 // Components
-// import CoffeeIcon from "../InterestIcons/CoffeeIcon";
-import SpeakerIcon from "../InterestIcons/SpeakerIcon";
-import MentorIcon from "../InterestIcons/MentorIcon";
-import TutorIcon from "../InterestIcons/TutorIcon";
+import InterestIcons from "../InterestIcons/InterestIcons";
 
 
-function MentorCard({ mentorData }) {
-
-    // State
-    const [iconStatus, setIconStatus] = useState()
-
+function MentorCard(props) {
+const { mentorData } = props
 
     return (
         <div className="mentor-card">
-            <Link to={`/mentors/${mentorData.id}`}>
-                <img src={mentorData.profile_photo} alt={`"${mentorData.first_name} ${mentorData.last_name}"`} />
+            <Link to={`/profile/${mentorData.id}`}>
+                <img src={`"${mentorData.profile_photo}"`} alt={`"${mentorData.first_name} ${mentorData.last_name}"`} />
                 <h3>{mentorData.first_name} {mentorData.last_name}S</h3>
-                {/* <CoffeeIcon /> */}
-                <MentorIcon />
-                <SpeakerIcon />
-                <TutorIcon />
+                <InterestIcons />
             </Link>
         </div>
     );

@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 
 // Components
 import MentorCard from "../components/MentorCard/MentorCard";
-
-// Icon Components
-import CoffeeIcon from "../components/InterestIcons/CoffeeIcon";
-import MentorIcon from "../components/InterestIcons/MentorIcon";
-import TutorIcon from "../components/InterestIcons/TutorIcon";
-import SpeakerIcon from "../components/InterestIcons/SpeakerIcon";
-
 
 function MentorsPage() {
 
