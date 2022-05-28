@@ -6,11 +6,9 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 // Components
-import ProjectOwner from "../../components/ProjectOwner/ProjectOwner";
-import PledgeUser from "../../components/Pledge/PledgeUser"
+import ArticlesOwner from "../components/ArticlesOwner/ArticlesOwner";
+import CommentUser from "../components/CommentUser/CommentUser"
 
-// const handleSubmit = async (event) => {"/project/:id/edit"}
-import Palslogo from "../../pages/HomePage/images/logo.png"
 
 function ProjectPage() {
     // State
@@ -22,7 +20,7 @@ function ProjectPage() {
     
     // Actions & Helpers
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}articles/${id}`)
           .then((results) => {
             return results.json();
           })
@@ -34,36 +32,36 @@ function ProjectPage() {
 
     // Loading State
     // "Skeleton" Loading
-    if (!projectData) {
-        return <p className="pcardtitle">Loading project Page...</p>;
+    if (!articlesData) {
+        return <p className="">Loading articles Page...</p>;
     }
 
     if (isError) {
-        return <p className="pcardtitle">Project Doesn't Exist...</p>;
+        return <p className="">articles Doesn't Exist...</p>;
     }
 
     // Normal State
     return (
      <div>
         <div>
-            <p className="pcardtitle">{projectData.title}</p> <div className="homepage-wrapper">
-            <p className="createdby">Was Nominated by: <ProjectOwner owner={projectData.owner} /> </p>
-            <p className="createdby">Date Created:{projectData.date_created} </p>
+            <p className="">{projectData.title}</p> <div className="homepage-wrapper">
+            <p className="">Was Written by: <ProjectOwner owner={projectData.owner} /> </p>
+            <p className="">Date Created:{projectData.date_created} </p>
             
         </div>
         
     
    
         
-        <div className="project-details">
-                <img className="project-page-img" src={projectData.image} alt="project img"/>
+        <div className="">
+                <img className="" src={projectData.image} alt=""/>
                 <br></br><br></br>
-                <p className="projectinfo">Every animal on this site is waiting to be someone’s Pal and every Pal deserves a home. All of our Pals are waiting at rescues and shelters, where they just need a little extra help from you before they can be placed up for adoption. </p>
+                <p className="">This is text to descripe the articles page. </p>
                 <ul>
-                    <div className="yellowtext">
+                    <div className="">
                     <p>{projectData.description}</p></div>
-                    <div className="pal">
-                    <div className="goal">
+                    <div className="">
+                    <div className="">
                     <p>Donation Goal: ${projectData.goal}</p></div>
                     <p>Pal Category: {projectData.category}</p></div>
                     

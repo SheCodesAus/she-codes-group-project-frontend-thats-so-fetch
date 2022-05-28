@@ -31,7 +31,7 @@ function ProjectForm(articlesData) {
     console.log("handleSubmit", articles, token)
     
     // Is user logged in and have they put something in all fields?
-    if (token && articles.title && articles.description && articles.goal && articles.image && project.date_created && project.category) {
+    if (token && articles.title && articles.description && articles.goal && articles.image && articles.date_created && articles.category) {
       try {
         const response = await fetch(
           `${process.env.REACT_APP_API_URL}articles/`,

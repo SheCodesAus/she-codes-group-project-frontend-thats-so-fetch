@@ -19,7 +19,7 @@ import AboutPage from "./pages/AboutPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import ArticlesFormPage from "./pages/ArticlesFormPage";
 import EditArticlesPage from "./pages/EditArticlesPage";
-
+import CommentPage from "./pages/CommentPage";
 
 function App() {
   return (

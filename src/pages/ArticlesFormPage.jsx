@@ -1,10 +1,10 @@
 import React from "react";
 
 // Components
-import ArticlesForm from "../";
+import ArticlesForm from "../components/ArticlesForm/ArticlesForm";
 
-function ProjectFormPage() {
-    return <ProjectForm />;
+function ArticlesFormPage() {
+    return <ArticlesForm />;
 }
 
 export default ArticlesFormPage.jsx;
