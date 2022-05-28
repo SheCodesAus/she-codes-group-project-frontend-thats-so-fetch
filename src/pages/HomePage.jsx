@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 function HomePage() {
 
     // States
-    const [articlesList, setProjectList] = useState([]);
+    const [articlesList, setArticlesList] = useState([]);
 
     // Action & Helpers
     useEffect(() => {
@@ -22,7 +22,7 @@ function HomePage() {
                 return results.json();
             })
             .then((data) => {
-                setProjectList(data);
+                setArticlesList(data);
             });
     }, []);
 

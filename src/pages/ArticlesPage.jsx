@@ -10,9 +10,9 @@ import ArticlesOwner from "../components/ArticlesOwner/ArticlesOwner";
 import CommentUser from "../components/CommentUser/CommentUser"
 
 
-function ProjectPage() {
+function ArticlesPage() {
     // State
-    const [projectData, setProjectData] = useState();
+    const [articlesData, setArticlesData] = useState();
     const [isError] = useState(false);
 
     // Hooks
@@ -25,7 +25,7 @@ function ProjectPage() {
             return results.json();
           })
           .then((data) => {
-            setProjectData(data);
+            setArticlesData(data);
           });
       }, [id]);
 
@@ -44,9 +44,9 @@ function ProjectPage() {
     return (
      <div>
         <div>
-            <p className="">{projectData.title}</p> <div className="homepage-wrapper">
-            <p className="">Was Written by: <ProjectOwner owner={projectData.owner} /> </p>
-            <p className="">Date Created:{projectData.date_created} </p>
+            <p className="">{articlesData.title}</p> <div className="homepage-wrapper">
+            <p className="">Was Written by: <ArticlesOwner owner={articlesData.owner} /> </p>
+            <p className="">Date Created:{articlesData.date_created} </p>
             
         </div>
         
@@ -54,16 +54,15 @@ function ProjectPage() {
    
         
         <div className="">
-                <img className="" src={projectData.image} alt=""/>
+                <img className="" src={articlesData.image} alt=""/>
                 <br></br><br></br>
                 <p className="">This is text to descripe the articles page. </p>
                 <ul>
                     <div className="">
-                    <p>{projectData.description}</p></div>
+                    <p>{articlesData.description}</p></div>
                     <div className="">
-                    <div className="">
-                    <p>Donation Goal: ${projectData.goal}</p></div>
-                    <p>Pal Category: {projectData.category}</p></div>
+                    
+                    </div>
                     
                 </ul>
         </div>
@@ -73,13 +72,12 @@ function ProjectPage() {
             <p className="supportgiven">Support Given by Pals:</p>
             <p className="plain-text">Below is the support and messages received to get this pal ready to be put up for adoption. </p>
             <ul className="bulletpoint-text">
-            {projectData.pledges.map((pledgeData, key) => {
+            {articlesData.comments.map((commentData, key) => {
                 return (
-                    <PledgeUser 
-                        key={`pledge-${pledgeData.id}`} 
-                        amount={pledgeData.amount} 
-                        supporter={pledgeData.supporter} 
-                        comment={pledgeData.comment} 
+                    <CommentUser 
+                        key={`comment-${commentData.id}`} 
+                        supporter={commentData.supporter} 
+                        comment={commentData.comment} 
                     />
 
             
@@ -95,11 +93,11 @@ function ProjectPage() {
         <div className="p-button-position">
         <div className="p-item">
         <button>
-            <Link to={`/pledges/${id}`} className="p-item" >Support Pal Page</Link>
+            <Link to={`/comments/${id}`} className="p-item" >Post Comments</Link>
        </button>
       
         <button>
-        <Link to={`/project/${projectData.id}/edit/`} className="p-item"> Edit Pal Page</Link>
+        <Link to={`/articles/${articlesData.id}/edit/`} className="p-item"> Edit Page</Link>
        </button>
        </div>
        </div>
@@ -115,4 +113,4 @@ function ProjectPage() {
     );
 }
 
-export default ProjectPage;
+export default ArticlesPage;

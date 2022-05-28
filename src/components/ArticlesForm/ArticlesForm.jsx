@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function ProjectForm(articlesData) {
+function ArticlesForm(articlesData) {
   // State
-  const [articles, postProject] = useState(
+  const [articles, postArticles] = useState(
     articlesData.map
   );
 
@@ -18,8 +18,8 @@ function ProjectForm(articlesData) {
   // Actions and Helpers
   const handleChange = (event) => {
     const { id, value } = event.target;
-    postProject((prevProjectData) => ({
-      ...prevProjectData,
+    postArticles((prevArticlesData) => ({
+      ...prevArticlesData,
       [id]: value,
     }));
   };
@@ -116,9 +116,7 @@ function ProjectForm(articlesData) {
       <div className="hero-image">
       <div className="hero-text">
         <h1>Upload a Pal</h1>
-                      {/* <p>
-                      <button className="cta"><Link  to="/projects/create/">SUPPORT A PAL</Link></button>
-                      </p> */}
+                
                       
         <h4>Help a Pal. Register them below for support.</h4> 
         
@@ -162,4 +160,4 @@ function ProjectForm(articlesData) {
     );
 }
 
-export default ProjectForm;
+export default ArticlesForm;
