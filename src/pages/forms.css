@@ -1,0 +1,125 @@
+
+h1 {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color:#6339ff
+}
+
+h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color:#6339ff
+}
+
+/* whole box */
+
+
+form {
+    background-color: #ffff;
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+    border-style: solid;
+    border-color: grey;
+    
+  }
+
+
+
+  .login-form {
+    margin: 50px auto;
+    width: 59%;
+    text-align: left;
+    padding:5px;
+    
+  }
+  
+
+  .form-item {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    
+  }
+/*   
+  user name and password font */
+  .form-item label {
+    font-size: 17px;
+    color: #303030;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    
+  }
+  
+  /* form text box */
+  .form-item input,
+  .form-item textarea {
+    
+    flex-basis: 50%;
+
+    text-align: left;
+
+    
+    
+  }
+  
+  /* form tect box hover */
+  .form-item input:hover,
+  .form-item textarea:hover {
+    border: 2px solid #fff9f2;
+
+    
+  }
+  
+  /* login text box */
+  .form-item input,
+  .form-item textarea,
+  .form-item button {
+    border: 2px solid #fff9f2;
+    padding: 20px;
+    font-size: 15px;
+    background-color: #ffff;
+    text-align: left;
+    margin: 5px;
+    
+  }
+  
+  .form-item input,
+  .form-item textarea {
+    color: #6339ff;
+  }
+  
+  .form-item button {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1.5px;
+  }
+  
+  .form-item button:hover {
+    border: 2px solid #fff9f2;
+    background-color:#b5ec85;
+    color:#6339ff;
+  }
+  
+  .form-item button {
+    width: 100px;
+    color: #ffff;
+    background-color: #6339ff;
+    text-align: center;
+    padding: 15px;
+    
+  }
+
+  .vertical-center {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  padding: 2px;
+
+  }

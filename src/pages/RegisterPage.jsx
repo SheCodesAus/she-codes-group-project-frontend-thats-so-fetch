@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+//Components
+import RegisterForm from "../components/RegisterForm/RegisterForm";
 
 function RegisterPage() {
-    return (
-        <h1>This is the Register Page!</h1>
-    )
+    
+    return <RegisterForm />;
 }
 
 export default RegisterPage;

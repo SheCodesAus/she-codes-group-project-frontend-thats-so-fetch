@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import LoginForm from "../components/LoginForm/LoginForm";
 
 function LoginPage() {
     return (
-        <h1>This is the Login Page!</h1>
+        <LoginForm/>
     )
 }
 

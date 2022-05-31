@@ -5,25 +5,25 @@ import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 // Images
-import logo from "../../images/Navbar_logo.png"
+import logo from "../../images/Navbar_logo_small.png"
 
 function Navbar() {
     
     return(
-        <nav>
-            <div className="logoDiv">
-                <Link className="logo" to="/"><img className="logo" src={logo}/></Link>
-            </div>
-            <ul className="firstList">
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/mentors">Mentors</Link></li>
-                <li><Link to="/news">News</Link></li>
-            </ul>
-            <ul className="secondList">
-            <li><Link to="/profile:id">Profile</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            </ul>
-        </nav>
+        <section className="navbar">
+            <nav className="firstList">
+                <Link to="/"><img src={logo} alt="fetch green logo"/></Link>
+                <Link to="/about">About</Link>
+                <Link to="/mentors">Mentors</Link>
+                <Link to="/news">News</Link>
+            </nav>
+            <nav className="secondList">
+                <Link to="/profile:id">Profile</Link>
+                <Link to="/login">Login</Link>
+                <Link to="/register/">Register </Link>
+
+            </nav>
+        </section>
     )
 }
 

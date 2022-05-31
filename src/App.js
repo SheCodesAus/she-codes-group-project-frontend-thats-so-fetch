@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
@@ -16,6 +16,8 @@ import NewsPage from "./pages/NewsPage";
 import ProfilePage from "./pages/ProfilePage";
 import AboutPage from "./pages/AboutPage";
 
+
+
 function App() {
   return (
     <Router>
@@ -24,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register/" element={<RegisterPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/mentors" element={<MentorsPage />} />
           <Route path="/news" element={<NewsPage />} />
