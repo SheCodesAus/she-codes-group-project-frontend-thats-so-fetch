@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
+// Import dummy data
+import { allArticles } from "../fakeData";
+import { allProfiles } from "../fakeData";
+
 // Style
 import "./HomePage.css";
 
 function HomePage() {
     return (
+        <div>
         <main>
         <h1>Fresh and engaged in Tech - Is this you?<br></br>This is Fetch!</h1>   
         <section className="introduction">
@@ -23,7 +28,22 @@ function HomePage() {
             </article>
         </section>
         </main>
-    )
+
+        <div>
+            <h1>Temporary placeholder for fake Articles</h1>
+            {allArticles.map((articleData, key) => {
+            return <div key={key}>{articleData.title}</div>;
+            })}
+        </div>
+
+        <div>
+        <h1>Temporary placeholder for fake Profiles</h1>
+            {allProfiles.map((profileData, key) => {
+            return <div key={key}>{profileData.username}</div>;
+            })}
+        </div>
+        </div>
+    );
 }
 
 export default HomePage;
