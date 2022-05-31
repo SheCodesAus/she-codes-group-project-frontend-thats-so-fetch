@@ -8,26 +8,26 @@ import "./InterestIcons.css"
 function InterestIcons(mentorData) {
 
     return (
-        <div>
-            mentorData.coffee === true ?
+        <div className="InterestsDiv">
+            {mentorData.coffee === true ?
                 <GiCoffeeCup className="active" />
             :
-                <GiCoffeeCup className="icon" />
+                <GiCoffeeCup className="icon" />}
 
-            mentorData.mentoring === true ?
+            {mentorData.mentoring === true ?
                 <GiTeacher className="active" />
             :
-                <GiTeacher className="icon" />
+                <GiTeacher className="icon" />}
 
-            mentorData.public_speaking === true ?
+            {mentorData.public_speaking === true ?
                 <GiPublicSpeaker className="active" />
             :
-                <GiPublicSpeaker className="icon" />
+                <GiPublicSpeaker className="icon" />}
 
-            mentorData.tutoring === true ?
+            {mentorData.tutoring === true ?
                 <GiPencilRuler className="active" />
             :
-                <GiPencilRuler className="icon" />
+                <GiPencilRuler className="icon" />}
 
         </div>
     )

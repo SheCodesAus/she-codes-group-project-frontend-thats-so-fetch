@@ -14,9 +14,10 @@ const { mentorData } = props
     return (
         <div className="mentor-card">
             <Link to={`/profile/${mentorData.id}`}>
-                <img src={`"${mentorData.profile_photo}"`} alt={`"${mentorData.first_name} ${mentorData.last_name}"`} />
-                <h3>{mentorData.first_name} {mentorData.last_name}S</h3>
-                <InterestIcons />
+                <img className="mentorImg" src={mentorData.profile_photo} alt={`${mentorData.first_name} ${mentorData.last_name}`} />
+                {/* <h3>{mentorData.first_name} {mentorData.last_name}</h3> */}
+                <h3 className="mentor-name">{mentorData.username}</h3>
+                <InterestIcons mentorData={mentorData}  />
             </Link>
         </div>
     );

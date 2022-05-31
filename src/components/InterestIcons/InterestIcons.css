@@ -6,3 +6,8 @@
 .active {
     fill: #9277f8;
 }
+
+.InterestsDiv {
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+}
