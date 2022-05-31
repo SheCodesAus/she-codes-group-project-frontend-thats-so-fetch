@@ -1,42 +1,32 @@
 
 h1 {
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    color:#6339ff
+    font-family: var(--font-secondary);
+    font-weight: var(--regular);
+    color: var(--color-primary);
 }
 
 h2 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-secondary);
     text-align: center;
-    color:#6339ff
+    color:var(--color-primary);
 }
 
 /* whole box */
 
 
 form {
-    background-color: #ffff;
+    background-color: var(--color-off-white);
     margin: 50px auto;
     width: 50%;
-    text-align: center;
     border-style: solid;
-    border-color: grey;
-    
+    border-color: var(--color-tertiary);
+    border-radius: 5px;
   }
 
-
-
-  .login-form {
-    margin: 50px auto;
-    width: 59%;
-    text-align: left;
-    padding:5px;
-    
-  }
-  
-
-  .form-item {
+  .field {
     display: flex;
+    border-radius: 5px;
     justify-content: left;
     align-items: left;
     text-align: left;
@@ -45,81 +35,55 @@ form {
     margin: 5px;
     
   }
-/*   
-  user name and password font */
-  .form-item label {
-    font-size: 17px;
-    color: #303030;
+
+  .field label {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    letter-spacing: 0.5px;
+    color: var(--color-dark-grey);
     padding: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    letter-spacing: 1px;
-    
   }
   
-  /* form text box */
-  .form-item input,
-  .form-item textarea {
-    
+  .field input,
+  .field textarea {
     flex-basis: 50%;
-
-    text-align: left;
-
-    
-    
-  }
-  
-  /* form tect box hover */
-  .form-item input:hover,
-  .form-item textarea:hover {
-    border: 2px solid #fff9f2;
-
-    
-  }
-  
-  /* login text box */
-  .form-item input,
-  .form-item textarea,
-  .form-item button {
-    border: 2px solid #fff9f2;
+    border: 2px solid var(--text-box-outline);
+    border-radius: 5px;
     padding: 20px;
     font-size: 15px;
     background-color: #ffff;
     text-align: left;
     margin: 5px;
-    
   }
-  
-  .form-item input,
-  .form-item textarea {
-    color: #6339ff;
-  }
-  
-  .form-item button {
-    margin-top: 10px;
-    font-size: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    letter-spacing: 1.5px;
-  }
-  
-  .form-item button:hover {
-    border: 2px solid #fff9f2;
-    background-color:#b5ec85;
-    color:#6339ff;
-  }
-  
-  .form-item button {
+
+  form button {
+    padding: 10px 25px;
+    font-size: 14px;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    margin-top: 2rem;
+    color: var(--color-off-white);
+    letter-spacing: 1px;
+    border: unset;
+}
+
+form button:hover {
+    background-color: var(--color-secondary);
+    color: var(--current-foreground);
+}
+  /* form button {
+    display: flex;
     width: 100px;
-    color: #ffff;
-    background-color: #6339ff;
-    text-align: center;
+    color: var(--color-off-white);
+    background-color: var(--current-background);
     padding: 15px;
-    
+    justify-content: right;
+    align-items: right;
+    padding: 2px;
   }
-
-  .vertical-center {
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  padding: 2px;
-
-  }
+  
+  form button:hover {
+    border: 2px solid var(--text-box-outline);
+    background-color:var(--color-secondary);
+    color:var(--color-primary);
+  } */
