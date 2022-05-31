@@ -6,6 +6,9 @@ import "./Footer.css"
 
 // Images
 import logo from "../../images/Footer_logo_small.png"
+import Facebook from "../../images/Facebook_icon.png"
+import LinkedIn from "../../images/LinkedIn_icon.png"
+import Twitter from "../../images/Twitter_icon.png"
 
 function Footer() {
     
@@ -15,9 +18,9 @@ function Footer() {
                     <Link to="/"><img src={logo} alt="fetch logo purple"/></Link>
                 </div>
                 <div className="column-left">
-                    <Link to="https://www.facebook.com/">Facebook</Link>
-                    <Link to="https://www.linkedin.com/home">LinkedIn</Link>
-                    <Link to="https://twitter.com/i/flow/login">Twitter</Link>
+                    <Link to="https://www.facebook.com/"><img src={Facebook} alt="facebook logo" width="25px"/></Link>
+                    <Link to="https://www.linkedin.com/home"><img src={LinkedIn} alt="linkedin logo" width="25px"/></Link>
+                    <Link to="https://twitter.com/i/flow/login"><img src={Twitter} alt="twitter logo" width="30px"/></Link>
                 </div>
                 <div className="column-middle">
                     <Link to="/news">News</Link>
