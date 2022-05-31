@@ -26,7 +26,7 @@ function RegisterForm() {
         if (credentials.username && credentials.password && credentials.password2) {
             try {
                 const response = await fetch(
-                    `${process.env.REACT_APP_API_URL}/user/register/`,
+                    `${process.env.REACT_APP_API_URL}user/register/`,
                     {
                         method: "post",
                         headers: {
