@@ -55,78 +55,60 @@ function RegisterForm() {
 
 
     return (
-
-
-        <div>
-        <div>
-      <div>    
           
-      <div>
-      <div>
-        <h1>Register</h1>
-                         
-        <h4>Join fetch today.</h4> 
-        
-      </div>
-      
-      </div>
-      </div>
-
-
+    <div>
+    <div>
+        <h1>Want to be part of the Fetch community?</h1>               
+        <h2>Register below:</h2> 
     
-    <form className="login-form">
-        <div className="form-item">
-                <label htmlFor="username">Username:</label>
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Enter Username"
-                    onChange={handleChange}
-                />
+    <form>
+        <div className="field">
+            <label htmlFor="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter Username"
+                onChange={handleChange}/>
         </div>
 
 
-        <div className="form-item">
+        <div className="field">
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
                     id="email"
                     placeholder="Enter Email"
-                    onChange={handleChange}
-                />
+                    onChange={handleChange}/>
         </div>
 
-        <div className="form-item">
+        <div className="field">
                 <label htmlFor="first_name">First Name:</label>
                 <input
                     type="text"
                     id="first_name"
                     placeholder="Enter your First Name"
-                    onChange={handleChange}
-                />
+                    onChange={handleChange}/>
             </div>
 
-            <div className="form-item">
+            <div className="field">
                 <label htmlFor="last_name">Last Name:</label>
                 <input
                     type="text"
                     id="last_name"
                     placeholder="Enter your Last Name"
-                    onChange={handleChange}
-                />
+                    onChange={handleChange}/>
             </div>
 
-            <div className="form-item">
+            <div className="field">
                 <label htmlFor="password">Password:</label>
                 <input
                     type="password"
                     id="password"
                     placeholder="Password"
-                    onChange={handleChange}
-                />
+                    onChange={handleChange}/>
             </div>
 
-            <div className="form-item">
+            <div className="field">
                 <label htmlFor="password2">Repeat Password:</label>
                 <input
                     type="password"
@@ -136,8 +118,8 @@ function RegisterForm() {
                 />
             </div>
 
-            <div className="form-item">
-            <button className="button1" type="submit" onClick={handleSubmit}>
+            <div className="field">
+            <button type="submit" onClick={handleSubmit}>
                 Create Account
             </button>
             </div>
