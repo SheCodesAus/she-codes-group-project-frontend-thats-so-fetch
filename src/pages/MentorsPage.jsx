@@ -15,7 +15,7 @@ function MentorsPage() {
 
     // Actions and Helpers
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}user`)
+        fetch(`${process.env.REACT_APP_API_URL}user/`)
             .then((results) => {
                 return results.json();
             })
