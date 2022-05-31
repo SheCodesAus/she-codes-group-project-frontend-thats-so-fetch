@@ -12,8 +12,6 @@ h2 {
     color:var(--color-primary);
 }
 
-/* whole box */
-
 
 form {
     background-color: var(--color-off-white);
@@ -71,19 +69,8 @@ form button:hover {
     background-color: var(--color-secondary);
     color: var(--current-foreground);
 }
-  /* form button {
-    display: flex;
-    width: 100px;
-    color: var(--color-off-white);
-    background-color: var(--current-background);
-    padding: 15px;
-    justify-content: right;
-    align-items: right;
-    padding: 2px;
-  }
-  
-  form button:hover {
-    border: 2px solid var(--text-box-outline);
-    background-color:var(--color-secondary);
-    color:var(--color-primary);
-  } */
+
+form button:active {
+  background-color: var(--color-tertiary);
+  color: var(--current-foreground);
+}
