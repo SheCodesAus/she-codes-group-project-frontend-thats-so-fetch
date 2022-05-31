@@ -77,8 +77,10 @@ const handleSubmit = async (event) => {
         ];
 
         return (
-            <form className="ArticleForm">
-              <h3> Write an article </h3>
+          <div>
+            <h2><br />Write your article</h2>    
+          <form>
+            <div className="field">
               {formFields.map((field, key) => {
                 return (
                   <div className="row" key={`$key}-${field.id}`}>
@@ -92,14 +94,14 @@ const handleSubmit = async (event) => {
                   </div>
                 );
               })}
-              <button className="primary-button" type="submit" onClick={handleSubmit}>
-                Post Article
+              <button type="submit" onClick={handleSubmit}>
+                Post article
               </button>
+              </div>
             </form>
+            </div>
           );
         }
         
         export default ArticleForm;
 
-}
-}
