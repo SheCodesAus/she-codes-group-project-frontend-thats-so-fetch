@@ -1,11 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
+// Components
+import { MentorCard } from "../components/MentorCard/MentorCard";
+
+// Import dummy data
+// import { allArticles } from "../fakeData";
+// import { allProfiles } from "../fakeData";
+
+    // State
+    const [mentorList, setMentorList] = useState();
+    const [articleList, setArticleList] = useState();
+
+    // Actions and Helpers FOR MENTOR DATA
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}user/`)
+            .then((results) => {
+                return results.json();
+            })
+            .then((data) => {
+                console.log(data)
+                setMentorList(data);
+            });
+    }, []);
+
+
+        // Actions and Helpers for ARTICLE DATA
+        useEffect(() => {
+            fetch(`${process.env.REACT_APP_API_URL}articles/`)
+                .then((results) => {
+                    return results.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    setArticleList(data);
+                });
+        }, []);
+
 // Style
 import "./HomePage.css";
 
 function HomePage() {
     return (
+        <div>
         <main>
         <h1>Fresh and engaged in Tech - Is this you?<br></br>This is Fetch!</h1>   
         <section className="introduction">
@@ -23,7 +60,24 @@ function HomePage() {
             </article>
         </section>
         </main>
-    )
+
+        <div>
+            <h1>Read Our Articles</h1>
+            {articleList.map((articleData, key) => {
+            return <div key={key} articleData={articleData}>{articleData.title}</div>;
+            })}
+        </div>
+
+        <div>
+        <h1>Check Out Our AMAZING Mentors!</h1>
+            {mentorList.map((mentorData, key) => {
+            return <div key={key} mentorData={mentorData}>
+                <MentorCard />
+            </div>;
+            })}
+        </div>
+        </div>
+    );
 }
 
 export default HomePage;
