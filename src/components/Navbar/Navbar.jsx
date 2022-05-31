@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Styles
 import "./Navbar.css"
@@ -8,6 +8,28 @@ import "./Navbar.css"
 import logo from "../../images/Navbar_logo_small.png"
 
 function Navbar() {
+
+    // Hooks
+    const navigate = useNavigate();
+
+    // Actions and Helpers
+    const navigateToLogin = () => {
+        navigate("/login")
+    }
+
+    const handleSignOut = () => {
+        window.localStorage.removeItem("token")
+        navigateToLogin()
+    }
+
+    const checkUser = () => {
+        const isUserLoggedIn = !!window.localStorage.getItem("token");
+        // console.log("isUserLoggedIn", isUserLoggedIn)
+
+        return isUserLoggedIn
+            ? <a href="logout" onClick={handleSignOut} className="button">Log out</a>
+            : <a href="login" onClick={navigateToLogin} className="button">Log in</a>
+    }
     
     return(
         <section className="navbar">
@@ -19,7 +41,8 @@ function Navbar() {
             </nav>
             <nav className="secondList">
                 <Link to="/profile:id">Profile</Link>
-                <Link to="/login">Login</Link>
+                {/* Below we call the Action for the Login/Logout button */}
+                {checkUser()}
                 <Link to="/register/">Register </Link>
 
             </nav>
