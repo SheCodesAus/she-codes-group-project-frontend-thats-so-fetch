@@ -1,13 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+// Style
+import "./HomePage.css";
 
 // Components
-import { MentorCard } from "../components/MentorCard/MentorCard";
+import MentorCard from "../components/MentorCard/MentorCard";
 
 // Import dummy data
 // import { allArticles } from "../fakeData";
 // import { allProfiles } from "../fakeData";
 
+    
+
+function HomePage() {
+    
     // State
     const [mentorList, setMentorList] = useState();
     const [articleList, setArticleList] = useState();
@@ -37,10 +44,7 @@ import { MentorCard } from "../components/MentorCard/MentorCard";
                 });
         }, []);
 
-// Style
-import "./HomePage.css";
-
-function HomePage() {
+        
     return (
         <div>
         <main>
