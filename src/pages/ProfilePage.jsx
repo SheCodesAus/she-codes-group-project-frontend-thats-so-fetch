@@ -1,9 +1,6 @@
-import React from "react";
-// COMMENTED OUT WHILE TESTING WITH DUMMY DATA
-// import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import { allProfiles as profileData } from "../fakeData";
 // Components
 //FORM
 import ProfileForm from "../components/ProfileForm/ProfileForm";
@@ -13,21 +10,21 @@ import InterestIcons from "../components/InterestIcons/InterestIcons";
 
 function ProfilePage() {
 
-    // COMMENTED OUT WHILE TESTING WITH DUMMY DATA
-    // // States
-    // const [profileData, setProfileData] = useState();
-    // const { id } = useParams();
 
-    // // Actions
-    // useEffect(() => {
-    //     fetch(`{process.env.REACT_APP_API_URL}user/${id}`)
-    //     .then((results) => {
-    //         return results.json();
-    //     })
-    //     .then((data) => {
-    //         setProfileData(data);
-    //     });
-    // }, [id]);
+    // States
+    const [profileData, setProfileData] = useState();
+    const { id } = useParams();
+
+    // Actions
+    useEffect(() => {
+        fetch(`{process.env.REACT_APP_API_URL}user/${id}`)
+        .then((results) => {
+            return results.json();
+        })
+        .then((data) => {
+            setProfileData(data);
+        });
+    }, [id]);
 
 
     return (
@@ -41,8 +38,7 @@ function ProfilePage() {
                 </div>
 
                 <img src={profileData.profile_photo} alt={`${profileData.first_name} ${profileData.last_name}`} />
-                {/* <h2>{profileData.first_name} {profileData.last_name}</h2> */}
-                <h2>{profileData.username}</h2>
+                <h2>{profileData.first_name} {profileData.last_name}</h2>
 
                 <InterestIcons />
 
