@@ -1,0 +1,13 @@
+.icon {
+    fill: #eeeafe;
+    width:1em;
+}
+
+.active {
+    fill: #9277f8;
+}
+
+.InterestsDiv {
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+}

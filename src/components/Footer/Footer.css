@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -22,8 +22,8 @@
 
 .column-left {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: row nowrap;
+  align-content: space-around;
   color: var(--light-foreground);
   align-items: stretch;
   flex: 1 1 auto;
@@ -33,8 +33,7 @@
 
 .column-middle {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column nowrap;
   align-items: stretch;
   flex: 1 1 auto;
   margin-left: 20px;
@@ -43,11 +42,10 @@
 
 .column-right {
   display: flex;
+  width: min(75% - 10rem);
+  margin-inline: auto;
   color: var(--light-foreground);
-  flex-direction: column;
   font-size: smaller;
-  margin-left: 60px;
-  max-width: 50%;
 }
 
 a {

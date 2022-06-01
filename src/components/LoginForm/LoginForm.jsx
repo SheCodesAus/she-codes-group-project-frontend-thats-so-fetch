@@ -5,8 +5,6 @@ import { useNavigate } from "react-router-dom";
 // Styles
 import '../../pages/forms.css';
 
-import { Link } from "react-router-dom";
-
 
 function LoginForm() {
   // State
@@ -46,6 +44,8 @@ function LoginForm() {
         const data = await response.json();
         console.log(data)
         window.localStorage.setItem("token", data.token);
+        window.localStorage.setItem("username", data.username);
+        window.localStorage.setItem("id", data.id);
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
         navigate("/");
       } catch (err) {

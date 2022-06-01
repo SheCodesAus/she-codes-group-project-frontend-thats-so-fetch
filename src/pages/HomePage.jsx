@@ -1,14 +1,50 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
-
-// Import dummy data
-import { allArticles } from "../fakeData";
-import { allProfiles } from "../fakeData";
+import { Link } from "react-router-dom";
 
 // Style
 import "./HomePage.css";
 
+// Components
+import MentorCard from "../components/MentorCard/MentorCard";
+
+// Import dummy data
+// import { allArticles } from "../fakeData";
+// import { allProfiles } from "../fakeData";
+
+    
+
 function HomePage() {
+    
+    // State
+    const [mentorList, setMentorList] = useState();
+    const [articleList, setArticleList] = useState();
+
+    // Actions and Helpers FOR MENTOR DATA
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}user/`)
+            .then((results) => {
+                return results.json();
+            })
+            .then((data) => {
+                console.log(data)
+                setMentorList(data);
+            });
+    }, []);
+
+
+        // Actions and Helpers for ARTICLE DATA
+        useEffect(() => {
+            fetch(`${process.env.REACT_APP_API_URL}articles/`)
+                .then((results) => {
+                    return results.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    setArticleList(data);
+                });
+        }, []);
+
+        
     return (
         <div>
         <main>
@@ -30,16 +66,18 @@ function HomePage() {
         </main>
 
         <div>
-            <h1>Temporary placeholder for fake Articles</h1>
-            {allArticles.map((articleData, key) => {
-            return <div key={key}>{articleData.title}</div>;
+            <h1>Read Our Articles</h1>
+            {articleList.map((articleData, key) => {
+            return <div key={key} articleData={articleData}>{articleData.title}</div>;
             })}
         </div>
 
         <div>
-        <h1>Temporary placeholder for fake Profiles</h1>
-            {allProfiles.map((profileData, key) => {
-            return <div key={key}>{profileData.username}</div>;
+        <h1>Check Out Our AMAZING Mentors!</h1>
+            {mentorList.map((mentorData, key) => {
+            return <div key={key} mentorData={mentorData}>
+                <MentorCard />
+            </div>;
             })}
         </div>
         </div>
