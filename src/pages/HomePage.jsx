@@ -24,7 +24,7 @@ function HomePage() {
         return results.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setMentorList(data);
       });
   }, []);
@@ -36,7 +36,7 @@ function HomePage() {
         return results.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setArticleList(data);
       });
   }, []);
