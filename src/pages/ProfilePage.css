@@ -1,0 +1,23 @@
+.banner {
+  margin-left: 50px;
+  justify-content: center;
+  border-image: 50px;
+}
+
+.profile-photo {
+  top: 30px;
+  border-radius: 50%;
+}
+
+.interest-icons {
+  padding: 50px;
+  margin: 30px;
+  margin-left: 50px;
+}
+
+.profileInformation {
+  padding: 50px;
+  margin: 50px;
+  justify-content: center;
+  font-size: larger;
+}
