@@ -19,6 +19,13 @@ function ProfilePage() {
     fetch(`{process.env.REACT_APP_API_URL}user/${id}`)
       .then((results) => {
         return results.json();
+        // For some reason this return results.json line (line 21) is returning the html from the index.html file
+        // from the public folder. You can see if you change the ".json" to ".text". and check the console log in inspect
+        // or the network preview of what is actually being returned.
+        // I did a bit of digging into this one and the unexpected token error that is happening here
+        // is due to the fact that the info being passed is in HTML format starting with < at position 0
+        // and not in the json format that we are wanting. which should start with a {
+        // Hope this provides some guidance for this error. I need to move on to something else -_-
       })
       .then((data) => {
         console.log(data);
