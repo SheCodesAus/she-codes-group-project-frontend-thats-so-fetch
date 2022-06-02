@@ -50,6 +50,8 @@ function ProfileForm(profileData) {
       profile.tutoring &&
       profile.public_speaking
     )
+      // line 56 does not match exactly as the const response in profilepage.jsx. Notice the $ in await fetch is different
+      //   This doesn't seem to be doing anythig that I'm aware of - I'm unsure which one is "correct"
       try {
         const response = await fetch(`${process.env.RE_APP_API_URL}user/`, {
           method: "put",
