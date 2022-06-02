@@ -17,6 +17,8 @@ function HomePage() {
   const [articleList, setArticleList] = useState([]);
   //   we will need to work out how to now see the passwords of the user in inspect tool
 
+  // Again have changed mentorData and articleData to mentordata and articledatat with lower case 'd' this has solved an issue with the DOM
+  // I'm aware that we have always done it with the capital - so I'm not sure what this has worked. but yay/
   // Actions and Helpers FOR MENTOR DATA
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}user/`)
@@ -80,10 +82,10 @@ function HomePage() {
 
       <div>
         <h1>Read Our Articles</h1>
-        {articleList.map((articleData, key) => {
+        {articleList.map((articledata, key) => {
           return (
-            <div key={key} articleData={articleData}>
-              {articleData.title}
+            <div key={key} articledata={articledata}>
+              {articledata.title}
             </div>
           );
         })}
@@ -91,9 +93,9 @@ function HomePage() {
 
       <div>
         <h1>Check Out Our AMAZING Mentors!</h1>
-        {mentorList.map((mentorData, key) => {
+        {mentorList.map((mentordata, key) => {
           return (
-            <div key={key} mentorData={mentorData}>
+            <div key={key} mentordata={mentordata}>
               <MentorCard />
             </div>
           );
