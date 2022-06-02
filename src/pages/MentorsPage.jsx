@@ -11,6 +11,7 @@ function MentorsPage() {
   const [mentorList, setMentorList] = useState([]);
   //   Adding the [] into the useState() has displayed items on mentor page
 
+  // error asking for mentorData to be mentordata with lowercase d. Seems to have solved prop error for now...
   // Actions and Helpers
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}user/`)
@@ -18,7 +19,6 @@ function MentorsPage() {
         return results.json();
       })
       .then((data) => {
-        console.log(data);
         setMentorList(data);
       });
   }, []);
@@ -28,12 +28,12 @@ function MentorsPage() {
       <h1>This is the Mentors Page!</h1>
 
       <div id="mentor-list">
-        {mentorList.map((mentorData, key) => {
-          console.log(mentorData);
+        {mentorList.map((mentordata, key) => {
+          console.log(mentordata);
           return (
             <MentorCard
-              key={`mentor-${mentorData.id}`}
-              mentorData={mentorData}
+              key={`mentor-${mentordata.id}`}
+              mentordata={mentordata}
             />
           );
         })}
