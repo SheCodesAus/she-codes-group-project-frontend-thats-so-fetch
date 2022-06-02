@@ -25,7 +25,7 @@ function MentorsPage() {
 
   return (
     <div>
-      <h1>This is the Mentors Page!</h1>
+      <h1>Our Fetch Mentors</h1>
 
       <div id="mentor-list">
         {mentorList.map((mentordata, key) => {

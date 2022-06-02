@@ -4,14 +4,21 @@ import { useParams } from "react-router-dom";
 // Components
 //FORM
 import ProfileForm from "../components/ProfileForm/ProfileForm";
+import RegisterForm from "../components/RegisterForm/RegisterForm";
 
 // ICONS
 import InterestIcons from "../components/InterestIcons/InterestIcons";
+
+// STYLES
+import "./ProfilePage.css";
 
 function ProfilePage() {
   // States
   //   adding [] to use state is displaying the info
   const [profileData, setProfileData] = useState([]);
+
+  //   to use frist_name from mentor data to display on mentors profile page as heading of the page
+  //   const { mentordata } = useState([]);
   const { id } = useParams();
 
   // Actions
@@ -20,13 +27,6 @@ function ProfilePage() {
       .then((results) => {
         console.log(results);
         return results.json();
-        // For some reason this return results.json line (line 21) is returning the html from the index.html file
-        // from the public folder. You can see if you change the ".json" to ".text". and check the console log in inspect
-        // or the network preview of what is actually being returned.
-        // I did a bit of digging into this one and the unexpected token error that is happening here
-        // is due to the fact that the info being passed is in HTML format starting with < at position 0
-        // and not in the json format that we are wanting. which should start with a {
-        // Hope this provides some guidance for this error. I need to move on to something else -_-
       })
       .then((data) => {
         console.log(data);
@@ -36,8 +36,12 @@ function ProfilePage() {
   // Add link to user's articles on profile?
   return (
     <div>
-      <h1>Profile Page</h1>
-
+      {/* I was trying to add the mentors first_name here with the const state from above to display at the top of each user's profile page */}
+      <div className="mentor-name">
+        <h1> Mentor's Name</h1>
+        {/* <h1>{mentordata.first_name}</h1> */}
+      </div>
+      {/* i have commented things out below so if someone doesn't include the information its not empty saying "Social Link:" with no user input */}
       <div className="profileInformation">
         <div className="banner">
           <img
@@ -45,22 +49,23 @@ function ProfilePage() {
             alt={`${profileData.first_name} ${profileData.last_name}'s Banner.`}
           />
         </div>
-
-        <img
-          src={profileData.profile_photo}
-          alt={`${profileData.first_name} ${profileData.last_name}`}
-        />
+        <div className="profile-photo">
+          <img
+            src={profileData.profile_photo}
+            alt={`${profileData.first_name} ${profileData.last_name}`}
+          />
+        </div>
         <h2>
           {profileData.first_name} {profileData.last_name}
         </h2>
-
-        <InterestIcons />
-
-        <h4>Location:</h4>
-        <p>{profileData.location}</p>
-        <h4>Social Link:</h4>
+        <div className="interest-icons">
+          <InterestIcons />
+        </div>
+        <h4>From {profileData.location}</h4>
+        {/* <p>From</p> */}
+        {/* <h4>Social Link:</h4> */}
         <a href={profileData.social_link}>{profileData.social_link}</a>
-        <h4>Bio:</h4>
+        <h4>More on this mentor...</h4>
         <p>{profileData.bio}</p>
       </div>
 
