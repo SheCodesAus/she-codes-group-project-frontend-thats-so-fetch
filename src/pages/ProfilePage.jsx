@@ -16,8 +16,9 @@ function ProfilePage() {
 
   // Actions
   useEffect(() => {
-    fetch(`{process.env.REACT_APP_API_URL}user/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}user/profile/${id}/`)
       .then((results) => {
+        console.log(results);
         return results.json();
         // For some reason this return results.json line (line 21) is returning the html from the index.html file
         // from the public folder. You can see if you change the ".json" to ".text". and check the console log in inspect
