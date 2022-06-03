@@ -1,7 +1,17 @@
 #mentor-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-self: center;
-    align-self: center;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: center;
+  align-self: center;
+  padding: 20px;
+  margin: 30px;
+  width: 100%;
 }
+
+/* #mentor-img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  margin: 0px;
+  padding: 30px;
+} */

@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 // Styles
-import './App.css';
+import "./App.css";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -16,8 +16,7 @@ import MentorsPage from "./pages/MentorsPage";
 import NewsPage from "./pages/NewsPage";
 import ProfilePage from "./pages/ProfilePage";
 import AboutPage from "./pages/AboutPage";
-
-
+import ProfileFormPage from "./pages/ProfileFormPage";
 
 function App() {
   return (
@@ -32,6 +31,7 @@ function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/profileform" element={<ProfileFormPage />} />
         </Routes>
       </div>
       <div>
