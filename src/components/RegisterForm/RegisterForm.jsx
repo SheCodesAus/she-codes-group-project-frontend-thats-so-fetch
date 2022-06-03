@@ -32,7 +32,24 @@ function RegisterForm() {
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify(credentials),
+                        body: JSON.stringify({
+                            username: credentials.username,
+                            email: credentials.email,
+                            password: credentials.password,
+                            first_name: credentials.first_name,
+                            last_name: credentials.last_name,
+                            is_mentor: false,
+                            is_student: false,
+                            profile_photo: "https://homecorpfinance.com.au/wp-content/uploads/2020/06/female_avatar.jpg",
+                            banner_photo: "https://t3.ftcdn.net/jpg/04/19/06/66/360_F_419066648_CBc58ZxOdT8kzaxuHi3OQUWrqtblMzEP.jpg",
+                            location: "Unknown",
+                            social_link: "https://thawing-sierra-22554.herokuapp.com/",
+                            bio: "An amazing bio is still in production.",
+                            coffee: false,
+                            mentoring: false,
+                            tutoring: false,
+                            public_speaking: false
+                        }),
                     }
                 );
                 const data = await response.json();
