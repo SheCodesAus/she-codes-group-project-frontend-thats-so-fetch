@@ -26,55 +26,23 @@ function ArticleForm(articleData) {
       article.image
       //   article.category
     )
-      try {        
-              const response = await fetch(`${process.env.REACT_APP_API_URL}articles/`, {
-              method: "post",
-              headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Token ${token}`
-              },
-              body: JSON.stringigy({
-                  title: article.title,
-                  pub_date: new Date(article.pub_date).toISOString(),
-                  content: article.content,
-                  image: article.image,
-              }),
-          });
-          const data = await response.json();
-          console.log(data);
-          navigate(`/articles/${data.id}`);
-        } catch (err) {
-            console.log(err);
-        }
-    };
-
-    const  formFields = [
-        {
-            id: "title",
-            label: "Title:",
-            placeholder: "Article title",
-            type: "text",
-          },
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_API_URL}articles/`,
           {
-            id: "pub_date",
-            label: "Date Published:",
-            placeholder: "Date Published",
-            type: "date",
-          },
-          {
-            id: "content",
-            label: "Content",
-            placeholder: "Write your article",
-            type: "text",
-
-          },
-          body: JSON.stringigy({
-            title: article.title,
-            pub_date: new Date(article.pub_date).toISOString(),
-            content: article.content,
-            image: article.image,
-          }),
-        });
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Token ${token}`,
+            },
+            body: JSON.stringigy({
+              title: article.title,
+              pub_date: new Date(article.pub_date).toISOString(),
+              content: article.content,
+              image: article.image,
+            }),
+          }
+        );
         const data = await response.json();
         console.log(data);
         navigate(`/articles/${data.id}`);
