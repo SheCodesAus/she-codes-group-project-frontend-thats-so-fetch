@@ -8,7 +8,7 @@ import ArticleCard from "../components/ArticleCard/ArticleCard";
 
 function NewsPage() {
   // State
-  const [newsList, setNewsList] = useState([]);
+  const [articleList, setArticleList] = useState([]);
 
   //   Actions and Helpers
   useEffect(() => {
@@ -18,7 +18,7 @@ function NewsPage() {
       })
       .then((data) => {
         console.log(data);
-        setNewsList(data);
+        setArticleList(data);
       });
   }, []);
 
@@ -26,11 +26,14 @@ function NewsPage() {
     <div>
       <h1>This is the News Page!</h1>
 
-      <div id="news-list">
-        {newsList.map((newsData, key) => {
-          console.log(newsData);
+      <div id="article-list">
+        {articleList.map((articleData, key) => {
+          console.log(articleData);
           return (
-            <ArticleCard key={`news-${newsData.id}`} newsData={newsData} />
+            <ArticleCard
+              key={`article-${articleData.id}`}
+              articleData={articleData}
+            />
           );
         })}
       </div>
