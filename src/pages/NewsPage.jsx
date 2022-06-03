@@ -24,7 +24,7 @@ function NewsPage() {
 
   return (
     <div>
-      <h1>This is the News Page!</h1>
+      <h1>Fetch the latest News!</h1>
 
       <div id="article-list">
         {articleList.map((articleData, key) => {
