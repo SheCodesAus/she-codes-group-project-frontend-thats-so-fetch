@@ -77,7 +77,7 @@ function ProfileForm(profileData) {
         });
         const data = await response.json();
         console.log(data);
-        navigate(`/user/${data.id}`);
+        navigate(`/profile/${data.id}`);
       } catch (err) {
         console.log(err);
       }
