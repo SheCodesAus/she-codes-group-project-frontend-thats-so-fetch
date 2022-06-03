@@ -5,11 +5,12 @@
 }
 
 .mentorImg {
-    max-width: 400px;
-    height: 400px;
+  max-width: 400px;
+  height: 400px;
 }
 
 .mentor-name {
     color:var(--color-primary);
     text-align: center;
 }
+

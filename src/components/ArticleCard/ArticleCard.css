@@ -1,0 +1,9 @@
+#article-card {
+  margin: 0.5em;
+  justify-self: center;
+}
+
+.articleImg {
+  max-width: 400px;
+  height: 400px;
+}

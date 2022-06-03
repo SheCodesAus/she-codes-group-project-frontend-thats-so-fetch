@@ -17,6 +17,7 @@ import NewsPage from "./pages/NewsPage";
 import ProfilePage from "./pages/ProfilePage";
 import AboutPage from "./pages/AboutPage";
 import ProfileFormPage from "./pages/ProfileFormPage";
+import ArticleDetailPage from "./pages/ArticleDetailPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/mentors" element={<MentorsPage />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/articles/:id" element={<ArticleDetailPage />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/profileform" element={<ProfileFormPage />} />
