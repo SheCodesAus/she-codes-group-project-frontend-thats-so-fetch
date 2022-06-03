@@ -38,7 +38,7 @@ function ProfilePage() {
     <div className="profile-div">
       {/* I was trying to add the mentors first_name here with the const state from above to display at the top of each user's profile page */}
       <div className="mentor-name">
-        <h1> Mentor's Name</h1>
+        <h1>{profileData.username}</h1>
         {/* <h1>{mentordata.first_name}</h1> */}
       </div>
       {/* i have commented things out below so if someone doesn't include the information its not empty saying "Social Link:" with no user input */}
@@ -59,14 +59,18 @@ function ProfilePage() {
           {profileData.first_name} {profileData.last_name}
         </h2>
         <div className="interest-icons">
-          <InterestIcons />
+          <InterestIcons mentordata= {profileData} />
         </div>
-        <h4>From {profileData.location}</h4>
+        <div className="location">
+            <h4>From {profileData.location}</h4>
         {/* <p>From</p> */}
         {/* <h4>Social Link:</h4> */}
         <a href={profileData.social_link}>{profileData.social_link}</a>
-        <h4>More on this mentor...</h4>
-        <p>{profileData.bio}</p>
+        </div>
+        <div className="bio">
+            <h4>More on this mentor...</h4>
+            <p>{profileData.bio}</p>
+        </div>
       </div>
 
       {/* // THIS IS SUPPOSED TO SHOW YOU THE FORM TO EDIT YOUR PROFILE IF YOU ARE THE OWNER OF THE PROFILE */}
