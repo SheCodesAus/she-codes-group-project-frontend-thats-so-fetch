@@ -53,7 +53,7 @@ function ProfileForm(profileData) {
       // line 56 does not match exactly as the const response in profilepage.jsx. Notice the $ in await fetch is different
       //   This doesn't seem to be doing anythig that I'm aware of - I'm unsure which one is "correct"
       try {
-        const response = await fetch(`${process.env.RE_APP_API_URL}user/`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}user/`, {
           method: "put",
           headers: {
             "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function ProfileForm(profileData) {
         });
         const data = await response.json();
         console.log(data);
-        navigate(`/user/${data.id}`);
+        navigate(`/profile/${data.id}`);
       } catch (err) {
         console.log(err);
       }
