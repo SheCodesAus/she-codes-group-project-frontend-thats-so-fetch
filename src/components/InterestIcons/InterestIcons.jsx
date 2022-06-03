@@ -8,29 +8,29 @@ import { ReactComponent as TutoringIcon } from '../../images/pencil-ruler.svg';
 import "./InterestIcons.css";
 
 // WILL NEED TO TEST THIS ONCE THE API IS WORKING
-function InterestIcons(mentorData) {
+function InterestIcons(mentordata) {
 
   return (
     <div className="InterestsDiv">
-      {mentorData.coffee === true ? (
+      {mentordata.coffee === true ? (
         <CoffeeIcon className="active" />
       ) : (
         <CoffeeIcon className="icon" />
       )}
 
-      {mentorData.mentoring === true ? (
+      {mentordata.mentoring === true ? (
         <MentoringIcon className="active" />
       ) : (
         <MentoringIcon className="icon" />
       )}
 
-      {mentorData.public_speaking === true ? (
+      {mentordata.public_speaking === true ? (
         <SpeakingIcon className="active" />
       ) : (
         <SpeakingIcon className="icon" />
       )}
 
-      {mentorData.tutoring === true ? (
+      {mentordata.tutoring === true ? (
         <TutoringIcon className="active" />
       ) : (
         <TutoringIcon className="icon" />
