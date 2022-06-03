@@ -42,3 +42,13 @@
 .highlight {
     color: var(--color-primary)
 }
+
+#mentor-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+    padding: 20px;
+    margin: 30px;
+    width: 100%;
+  }
