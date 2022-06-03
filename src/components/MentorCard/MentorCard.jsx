@@ -19,12 +19,13 @@ function MentorCard(props) {
           src={mentordata?.profile_photo}
           alt={`${mentordata?.first_name} ${mentordata?.last_name}`}
         />
+        </Link>
         <h3>
           {mentordata?.first_name} {mentordata?.last_name}
         </h3>
         <h3 className="mentor-name">{mentordata?.username}</h3>
         <InterestIcons mentordata={mentordata} />
-      </Link>
+      
     </div>
   );
 }

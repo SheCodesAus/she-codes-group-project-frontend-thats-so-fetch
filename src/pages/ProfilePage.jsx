@@ -35,7 +35,7 @@ function ProfilePage() {
   }, [id]);
   // Add link to user's articles on profile?
   return (
-    <div>
+    <div className="profile-div">
       {/* I was trying to add the mentors first_name here with the const state from above to display at the top of each user's profile page */}
       <div className="mentor-name">
         <h1> Mentor's Name</h1>

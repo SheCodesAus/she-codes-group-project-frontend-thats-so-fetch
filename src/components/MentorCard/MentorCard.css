@@ -1,6 +1,7 @@
-#mentor-card {
+.mentor-card {
     margin: 0.5em;
     justify-self: center;
+    padding:1em;
 }
 
 .mentorImg {
@@ -9,5 +10,6 @@
 }
 
 .mentor-name {
-    color:#303030;
+    color:var(--color-primary);
+    text-align: center;
 }
