@@ -81,19 +81,24 @@ function HomePage() {
 
       <div>
         <h1>Read Our Articles</h1>
-        {articleList.map((articledata, key) => {
+        <div id="article-list">
+        {articleList.map((articleData, key) => {
+          console.log(articleData);
           return (
             <ArticleCard
-              key={`article-${articledata.id}`}
-              articledata={articledata}
+              key={`article-${articleData.id}`}
+              articleData={articleData}
             />
           );
         })}
       </div>
+      </div>
 
       <div>
         <h1>Check Out Our AMAZING Mentors!</h1>
+        <div id="mentor-list">
         {mentorList.map((mentordata, key) => {
+          console.log(mentordata);
           return (
             <MentorCard
               key={`mentor-${mentordata.id}`}
@@ -101,6 +106,7 @@ function HomePage() {
             />
           );
         })}
+      </div>
       </div>
     </div>
   );
