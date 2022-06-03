@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 // Styles
 import "./ArticleCard.css";
 
-// Do we want/need icons? It might not be neccesary here. Maybe can create CategoriesIcons but I'm not sure how to do this
 // Components
-import InterestIcons from "../InterestIcons/InterestIcons";
 
 // article card to display article image, title and owner
 // if we aren't using the interests icons here we will need to fix line 27
@@ -26,7 +24,6 @@ function ArticleCard(props) {
         />
         <h3>{articleData?.title}</h3>
         <h3 className="article-owner">{articleData?.owner}</h3>
-        <InterestIcons articleData={articleData} />
       </Link>
     </div>
   );

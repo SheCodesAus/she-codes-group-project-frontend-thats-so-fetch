@@ -1,0 +1,32 @@
+.article-title {
+  padding: 50px;
+  margin: 50px;
+  justify-content: center;
+  font-size: larger;
+}
+
+.article-owner {
+  padding: 50px;
+  margin: 30px;
+  margin-left: 50px;
+}
+
+.article-img {
+  padding: 30px;
+  margin: 50px;
+  top: 30px;
+  border-radius: 50%;
+}
+
+.article-content {
+  padding: 50px;
+  margin: 50px;
+  justify-content: center;
+  font-size: larger;
+}
+
+.article-pub_date {
+  padding: 50px;
+  margin: 30px;
+  margin-left: 50px;
+}
