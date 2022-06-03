@@ -28,7 +28,7 @@ const handleSubmit = async (event) => {
         //   article.category
       )
       try {
-          const response = await fetch(`${process.env.RE_APP_API_URL}articles/`, {
+          const response = await fetch(`${process.env.REACT_APP_API_URL}articles/`, {
               method: "post",
               headers: {
                   "Content-Type": "application/json",
