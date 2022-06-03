@@ -1,23 +1,63 @@
-.banner {
-  margin-left: 50px;
-  justify-content: center;
-  border-image: 50px;
-}
-
 .profile-photo {
-  top: 30px;
-  border-radius: 50%;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  justify-items: center;
+  align-self: center;
 }
 
 .interest-icons {
   padding: 50px;
   margin: 30px;
-  margin-left: 50px;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 }
 
 .profileInformation {
-  padding: 50px;
-  margin: 50px;
   justify-content: center;
   font-size: larger;
+  grid-column:2 / 3;
+  grid-row: 3 / 4;
+}
+
+.profile-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 10% 35% 55%;
+}
+
+.mentor-name {
+  margin-top: 2em;
+  justify-self: center;
+  align-self: center;
+  grid-column:1 / span 2;
+  grid-row: 2 / 3;
+}
+
+.location {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.bio {
+  margin-top: 5em;
+  padding: 4em;
+  grid-row: 4 / 5;
+  grid-column: 1 / 3;
+}
+
+.banner {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.banner img {
+  width: 100vw;
+  max-height: 25vh;
+  object-fit: cover;
+}
+
+.profile-photo img {
+  max-width: 25vw;
+  margin: 2em;
+  border-radius: 50%;
 }
